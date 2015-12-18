@@ -1,0 +1,8 @@
+#MacOs specific
+.DS_STORE
+__MacOSX
+
+#NetBeans specific
+nbproject/*
+!nbproject/project.properties
+!nbproject/project.xml
