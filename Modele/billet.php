@@ -1,6 +1,6 @@
 <?php
 
-require 'Modele.php';
+require '../Modele/Modele.php';
 
 try {
   if (isset($_GET['id'])) {
@@ -9,7 +9,7 @@ try {
     if ($id != 0) {
       $billet = getBillet($id);
       $commentaires = getCommentaires($id);
-      require 'vueBillet.php';
+      require '../Vue/vueBillet.php';
       
     }
     else
@@ -20,6 +20,6 @@ try {
 }
 catch (Exception $e) {
   $msgErreur = $e->getMessage();
-  require 'vueErreur.php';
+  require '../Vue/vueErreur.php';
 }
 
