@@ -14,3 +14,17 @@
 </blockquote>
 <?php endforeach; ?>
 </div>
+<form method="post" action="index.php?action=commenter">
+    <div class="form-group">
+    <label for="InputAuteur">Auteur</label>
+    <input id="auteur" class="form-control" name="auteur" type="text" placeholder="Votre pseudo" 
+           required />
+    </div>
+    <div class="form-group">
+    <label for="InputAuteur">Commentaire</label>
+    <textarea id="txtCommentaire" class="form-control" name="contenu" rows="4" 
+              placeholder="Votre commentaire" required></textarea><br />
+    </div>
+    <input type="hidden" name="id" value="<?= $billet['id'] ?>" />
+    <input type="submit" value="Commenter" class="btn btn-default"/>
+</form>
