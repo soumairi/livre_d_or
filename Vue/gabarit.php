@@ -78,7 +78,7 @@
         <footer class="blog-footer">
             <p>Blog réalisé avec PHP, HTML5 et Bootstrap. Par <a href="soumairi@gmail.com">Soumairi Mouhssine</a>.</p>
             <p>
-                <a href="#">Back to top</a>
+                <a href="#">En haut</a>
             </p>
         </footer>
 

@@ -28,3 +28,4 @@
     <input type="hidden" name="id" value="<?= $billet['id'] ?>" />
     <input type="submit" value="Commenter" class="btn btn-default"/>
 </form>
+<hr>
