@@ -1,17 +1,16 @@
 <?php $titre = "Mon Blog - " . $billet['titre']; ?>
-<article>
-  <header>
-    <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
-    <time><?= $billet['date'] ?></time>
-  </header>
-  <p><?= $billet['contenu'] ?></p>
-</article>
-<hr />
-<header>
-  <h1 id="titreReponses">Réponses à <?= $billet['titre'] ?></h1>
-</header>
-<?php foreach ($commentaires as $commentaire): ?>
-  <p><?= $commentaire['auteur'] ?> dit :</p>
-  <p><?= $commentaire['contenu'] ?></p>
-<?php endforeach; ?>
+<div class="blog-post">
+<h2 class="blog-post-title"><?= $billet['titre'] ?></h2>
+<p class="blog-post-meta"><?= $billet['date'] ?></p>
+<p><?= $billet['contenu'] ?></p>
 
+<hr>
+  <h3>Réponses à <?= $billet['titre'] ?></h3>
+<hr>
+<?php foreach ($commentaires as $commentaire): ?>
+<blockquote>
+<p>Auteur :<a href="#"><?= $commentaire['auteur'] ?> </a></p>
+<p><?= $commentaire['contenu'] ?></p>
+</blockquote>
+<?php endforeach; ?>
+</div>

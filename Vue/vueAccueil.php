@@ -2,14 +2,9 @@
 
 <?php foreach ($billets as $billet):
     ?>
-    <article>
-        <header>
-            <a href="<?= "index.php?action=billet&id=" . $billet['id'] ?>">
-                <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
-            </a>
-            <time><?= $billet['date'] ?></time>
-        </header>
-        <p><?= $billet['contenu'] ?></p>
-    </article>
-    <hr />
+<div class="blog-post">
+<a href="<?= "index.php?action=billet&id=" . $billet['id'] ?>"><h2 class="blog-post-title"><?= $billet['titre'] ?></h2></a>
+<p class="blog-post-meta"><?= $billet['date'] ?></p>
+<p><?= $billet['contenu'] ?></p>
+</div>
 <?php endforeach; ?>
